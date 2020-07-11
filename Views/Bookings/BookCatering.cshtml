@@ -1,0 +1,89 @@
+﻿@model ASPproject.Models.Bookings
+
+@{
+    ViewData["Title"] = "Boka Catering";
+}
+
+
+<section class="container-fluid bg">
+    <section class="row justify-content-center">
+        <section class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+            <form asp-action="Confirm" class="form-container">
+                <h2 class="mt-4">Boka Catering </h2>
+                <br />
+                <p>
+                    Obs! Detta är endast en förfrågan till en bokning. En bekräftelse skickas till er via e-post när bokningen är godkänd
+                    och klar. Vi tar minst 10 st personer per bokning. Hör gärna av er om ni har några frågor.
+                </p>
+                <div class="form-row">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Date" class="control-label"></label>
+                        <input asp-for="Date" class="form-control" />
+                        <span asp-validation-for="Date" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Time" class="control-label"></label>
+                        <input asp-for="Time" class="form-control" />
+                        <span asp-validation-for="Time" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Menu" class="control-label"></label>
+                        <textarea asp-for="Menu" class="form-control rounded-0" rows="3"></textarea>
+                        <span asp-validation-for="Menu" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Specials" class="control-label"></label>
+                        <textarea asp-for="Specials" class="form-control rounded-0" rows="3"></textarea>
+                        <span asp-validation-for="Specials" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group" style="width:10%">
+                    <label asp-for="NumbersPeople" class="control-label"></label>
+                    <input asp-for="NumbersPeople" class="form-control" />
+                    <span asp-validation-for="NumbersPeople" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Address" class="control-label"></label>
+                        <input asp-for="Address" class="form-control" />
+                        <span asp-validation-for="Address" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="City" class="control-label"></label>
+                        <input asp-for="City" class="form-control" />
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Phonenumber" class="control-label"></label>
+                        <input asp-for="Phonenumber" class="form-control" />
+                        <span asp-validation-for="Phonenumber" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Email" class="control-label"></label>
+                        <input asp-for="Email" class="form-control" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Skicka" id="submitbtn" class="btn btn-secondary btn-lg" />
+                </div>
+            </form>
+        </section>
+    </section>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    
+}

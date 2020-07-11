@@ -1,0 +1,51 @@
+@model IEnumerable<ASPproject.Models.News>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1 class="ml-4 mt-4">Nyheter</h1>
+
+<p>
+    <a asp-action="Create" type="button" class="btn btn-secondary mt-4 ml-4">Lägg till</a>
+</p>
+
+<div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover">
+        <thead>
+            <tr>
+                <th style="width: 8%">
+                    @Html.DisplayNameFor(model => model.Title)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Message)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Date)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Message)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Date)
+                    </td>
+                    <td>
+                        <a asp-action="Edit" asp-route-id="@item.Id">Uppdatera</a> |
+                        <a asp-action="Details" asp-route-id="@item.Id">Se detaljer</a> |
+                        <a asp-action="Delete" asp-route-id="@item.Id">Radera</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    </div>

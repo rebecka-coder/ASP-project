@@ -1,0 +1,81 @@
+@model ASPproject.Models.Bookings
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="mainText">
+<h1 class="mb-4">Uppdatera</h1>
+
+<h4>Bokning</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Menu" class="control-label"></label>
+                <input asp-for="Menu" class="form-control" />
+                <span asp-validation-for="Menu" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Specials" class="control-label"></label>
+                <input asp-for="Specials" class="form-control" />
+                <span asp-validation-for="Specials" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NumbersPeople" class="control-label"></label>
+                <input asp-for="NumbersPeople" class="form-control" />
+                <span asp-validation-for="NumbersPeople" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Address" class="control-label"></label>
+                <input asp-for="Address" class="form-control" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="City" class="control-label"></label>
+                <input asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Phonenumber" class="control-label"></label>
+                <input asp-for="Phonenumber" class="form-control" />
+                <span asp-validation-for="Phonenumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Spara" class="btn btn-secondary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Tillbaka till bokningslistan</a>
+</div>
+    </div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

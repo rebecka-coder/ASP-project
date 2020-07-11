@@ -1,0 +1,41 @@
+@model ASPproject.Models.News
+
+@{
+    ViewData["Title"] = "Delete";
+}
+<div class="mainText">
+
+    <h1 class="mb-4">Radera</h1>
+
+    <h3>Är du säker på att radera detta inlägg?</h3>
+    <div>
+        <h4>Nyhet</h4>
+        <hr />
+        <dl class="row">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Message)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Message)
+            </dd>
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="Id" />
+            <input type="submit" value="Radera" class="btn btn-danger" /> |
+            <a asp-action="Index">Tillbaka till nyhetslistan</a>
+        </form>
+    </div>
+    </div>
