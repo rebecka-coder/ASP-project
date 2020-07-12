@@ -15,8 +15,8 @@
             <div class="carousel-caption">
                 <h1 class="headline">Jämtland catering</h1>
                 <div class="d-none d-md-block">
-                <a asp-controller="Home" type="button" class="btn btn-outline-light btn-lg" asp-action="Menu">Meny</a>
-                <a asp-controller="Bookings" type="button" class="btn btn-outline-light btn-lg" asp-action="BookCatering">Boka</a>
+                <a asp-controller="Home" class="btn btn-outline-light btn-lg" asp-action="Menu">Meny</a>
+                <a asp-controller="Bookings" class="btn btn-outline-light btn-lg" asp-action="BookCatering">Boka</a>
                 </div>
             </div>
         </div>
@@ -25,8 +25,8 @@
             <div class="carousel-caption">
                 <h1 class="display-3">Jämtland catering</h1>
                 <div class="d-none d-md-block">
-                    <a asp-controller="Home" type="button" class="btn btn-outline-light btn-lg" asp-action="Menu">Meny</a>
-                    <a asp-controller="Bookings" type="button" class="btn btn-outline-light btn-lg" asp-action="BookCatering">Boka</a>
+                    <a asp-controller="Home" class="btn btn-outline-light btn-lg" asp-action="Menu">Meny</a>
+                    <a asp-controller="Bookings" class="btn btn-outline-light btn-lg" asp-action="BookCatering">Boka</a>
                 </div>
             </div>
             </div>
@@ -35,13 +35,14 @@
             <div class="carousel-caption">
                 <h1 class="display-3">Jämtland catering</h1>
                 <div class="d-none d-md-block">
-                    <a asp-controller="Home" type="button" class="btn btn-outline-light btn-lg" asp-action="Menu">Meny</a>
-                    <a asp-controller="Bookings" type="button" class="btn btn-outline-light btn-lg" asp-action="BookCatering">Boka</a>
+                    <a asp-controller="Home" class="btn btn-outline-light btn-lg" asp-action="Menu">Meny</a>
+                    <a asp-controller="Bookings" class="btn btn-outline-light btn-lg" asp-action="BookCatering">Boka</a>
                 </div>
                 </div>
             </div>
-    </div>
-</div>
+        </div>
+</div><!--End of slides-->
+
 <div class="jumbotron text-center">
     <h1 class="display-4">Välkomna med eran bokning!</h1>
     <h2 class="display-5 booking-subtitle">Bokning sker via hemsidan eller via telefon 070-123 45 67</h2>
@@ -58,7 +59,7 @@
             @foreach (var news in Model)
             {
                     <div class="card mx-auto text-center news-card">
-                        <img src="~/images/news.jpg" class="card-img-top" />
+                        <img src="~/images/news.jpg" class="card-img-top" alt="notebook"/>
                         <div class="card-body">
                             <h3 class="card-title display-5">@Html.DisplayFor(modelItem => news.Title)</h3>
                             <p class="card-text">@Html.DisplayFor(modelItem => news.Message)</p>

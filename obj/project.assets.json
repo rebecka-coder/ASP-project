@@ -8683,7 +8683,7 @@
       "outputPath": "/Users/rebeckahogstrom/Projects/ASPproject/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/rebeckahogstrom/.config/NuGet/NuGet.Config"
+        "/Users/rebeckahogstrom/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"

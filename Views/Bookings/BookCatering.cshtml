@@ -5,9 +5,9 @@
 }
 
 
-<section class="container-fluid bg">
-    <section class="row justify-content-center">
-        <section class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+<div class="container-fluid bg">
+    <div class="row justify-content-center">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
             <form asp-action="Confirm" class="form-container">
                 <h2 class="mt-4">Boka Catering </h2>
                 <br />
@@ -78,9 +78,9 @@
                     <input type="submit" value="Skicka" id="submitbtn" class="btn btn-secondary btn-lg" />
                 </div>
             </form>
-        </section>
-    </section>
-</section>
+        </div>
+    </div>
+</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
