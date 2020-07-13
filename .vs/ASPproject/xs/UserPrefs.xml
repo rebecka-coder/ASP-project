@@ -1,10 +1,13 @@
 ﻿<Properties StartupConfiguration="{5B293C92-1A28-4E3B-86B8-56D6B7045DD8}|Default">
   <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="appsettings.json" Line="13" Column="4" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="ASPproject" expanded="True">
-            <Node name="ASPproject" expanded="True">
+            <Node name="ASPproject" expanded="True" selected="True">
               <Node name="Dependencies" expanded="True" />
             </Node>
           </Node>
