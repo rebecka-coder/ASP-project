@@ -113,7 +113,7 @@ footer {
 }
 /*Parallax images*/
 
-#parallax-image, #parallax-image-again {
+#parallax-image {
     background-image: url(../images/aboutus.jpg);
 }
 #parallax-image2 {

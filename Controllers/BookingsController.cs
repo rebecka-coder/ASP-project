@@ -43,7 +43,7 @@ namespace ASPproject.Controllers
             return View(bookings);
         }
 
-        [Route("Bookings/BokaCatering")]
+        [HttpGet("/BokaCatering")]
         public IActionResult BookCatering()
         {
             return View();
@@ -55,7 +55,6 @@ namespace ASPproject.Controllers
             return View();
         }
 
-        [Route("Bookings/BokaCatering/Bekräftelse")]
         public IActionResult Confirm()
         {
             return View();

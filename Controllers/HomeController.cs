@@ -34,13 +34,13 @@ namespace ASPproject.Controllers
             return View(await _context.News.ToListAsync());
         }
 
-        [HttpGet("/BokaCatering")]
+        
         public IActionResult BookCatering()
         {
             return View();
         }
 
-        [HttpGet("/Bekräftelse")]
+        
         public IActionResult Confirm()
         {
             return View();
